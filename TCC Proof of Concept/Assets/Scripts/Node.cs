@@ -19,15 +19,19 @@ public class Node : MonoBehaviour
     }
 
     void OnMouseDown() {
-        if (machine != null)
-        {
-            Debug.Log("Já existe algo construído aqui.");
+        if (!PlayerWallet.instance.checkForCredit(10f)) {
+            Debug.Log("Falha: Fundos insuficientes.");
+            return;
+        } else if (machine != null) {
+            Debug.Log("Falha: Já existe algo construído aqui.");
             return;
         }
 
         GameObject machineToBuild = BuildManager.instance.GetMachineToBuild();
         machine = (GameObject)Instantiate(machineToBuild, transform.position + positionOffset, transform.rotation);
 
+        BuildManager.instance.subtractMoney(10f);
+        PlayerWallet.instance.removeMoney(10f);
     }
 
     void OnMouseEnter() {
