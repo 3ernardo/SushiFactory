@@ -8,7 +8,7 @@ public class Spawner : MonoBehaviour
     public Transform foodPrefab;
     public Transform spawnPoint;
     public float spawnTimerInterval = 5f;
-    public float countdown = 5f;
+    private float countdown;
 
     void spawnFood() {
         Instantiate(foodPrefab, spawnPoint.position, spawnPoint.rotation);
@@ -17,7 +17,7 @@ public class Spawner : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        countdown = spawnTimerInterval;
     }
 
     // Update is called once per frame
