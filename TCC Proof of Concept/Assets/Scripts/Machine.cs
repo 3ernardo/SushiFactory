@@ -5,6 +5,8 @@ using UnityEngine;
 public class Machine : MonoBehaviour
 {
     public float counter;
+    public Transform prefabToSpawn;
+    public Transform spawnPoint;
 
     // private void OnCollisionEnter(Collision other) {
     private void OnTriggerStay(Collider other) {
@@ -18,6 +20,7 @@ public class Machine : MonoBehaviour
     }
 
     private void gotEnoughBoxes() {
+        Instantiate(prefabToSpawn, spawnPoint.position, spawnPoint.rotation);
         Debug.Log("Spawn a new box!");
         counter = 0;
     }
