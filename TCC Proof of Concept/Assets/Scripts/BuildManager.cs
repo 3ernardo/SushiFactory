@@ -22,11 +22,15 @@ public class BuildManager : MonoBehaviour
     public GameObject standardMachinePrefab;
     public GameObject advancedMachinePrefab;
     public GameObject basicMachinePrefab;
+    public GameObject conveyorRightMachinePrefab;
+    public GameObject conveyorUpMachinePrefab;
+    public GameObject conveyorDownMachinePrefab;
+    public GameObject conveyorLeftMachinePrefab;
 
     private void Start() {
         machineToBuild = standardMachinePrefab;
-        PlayerMoney = 100f;
-        PlayerWallet.instance.setMoney(80f);
+        // PlayerMoney = 100f;
+        PlayerWallet.instance.setMoney(PlayerMoney);
     }
 
     void Update() {
@@ -34,6 +38,19 @@ public class BuildManager : MonoBehaviour
         PlayerMoneyCounter.text = Mathf.Floor(PlayerWallet.instance.getMoney()).ToString();
     }
 
+    public void ChangeMachineConveyorRight() {
+        machineToBuild = conveyorRightMachinePrefab;
+    }
+    public void ChangeMachineConveyorUp() {
+        machineToBuild = conveyorUpMachinePrefab;
+    }
+    public void ChangeMachineConveyorDown() {
+        machineToBuild = conveyorDownMachinePrefab;
+    }
+    public void ChangeMachineConveyorLeft() {
+        machineToBuild = conveyorLeftMachinePrefab;
+    }
+    
     public void ChangeMachineStandard() {
         machineToBuild = standardMachinePrefab;
     }
