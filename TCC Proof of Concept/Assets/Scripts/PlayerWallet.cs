@@ -5,7 +5,6 @@ using UnityEngine;
 public class PlayerWallet : MonoBehaviour
 {
     public static PlayerWallet instance;
-
     private float playerMoney;
 
     void Awake() {

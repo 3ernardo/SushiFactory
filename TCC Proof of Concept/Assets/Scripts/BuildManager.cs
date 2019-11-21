@@ -9,8 +9,10 @@ public class BuildManager : MonoBehaviour
 
     public static BuildManager instance;
     public float PlayerMoney;
+    public float playerScore;
 
     public Text PlayerMoneyCounter;
+    public Text PlayerScoreCounter;
 
     public void subtractMoney(float value) {
         PlayerMoney = PlayerMoney - value;
@@ -31,11 +33,13 @@ public class BuildManager : MonoBehaviour
         machineToBuild = standardMachinePrefab;
         // PlayerMoney = 100f;
         PlayerWallet.instance.setMoney(PlayerMoney);
+        PlayerScore.instance.setPoints(playerScore);
     }
 
     void Update() {
         // PlayerMoneyCounter.text = Mathf.Floor(PlayerMoney).ToString();
         PlayerMoneyCounter.text = Mathf.Floor(PlayerWallet.instance.getMoney()).ToString();
+        PlayerScoreCounter.text = Mathf.Floor(PlayerScore.instance.getPoints()).ToString();
     }
 
     public void ChangeMachineConveyorRight() {
