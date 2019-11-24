@@ -6,12 +6,14 @@ public class Spawner : MonoBehaviour
 {
 
     public Transform foodPrefab;
+    public GameObject food;
     public Transform spawnPoint;
     public float spawnTimerInterval = 5f;
     private float countdown;
 
     void spawnFood() {
         Instantiate(foodPrefab, spawnPoint.position, spawnPoint.rotation);
+        // Debug.Log(food.getCost());
     }
 
     // Start is called before the first frame update

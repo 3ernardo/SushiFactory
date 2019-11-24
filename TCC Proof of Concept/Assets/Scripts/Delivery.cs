@@ -12,7 +12,7 @@ public class Delivery : MonoBehaviour
         Destroy(other.gameObject);
         PlayerScore.instance.addPoints(10);
         counter++;
-        Debug.Log("Número de pedidos entregues " + counter);
+        // Debug.Log("Número de pedidos entregues " + counter);
     }
 
     // Start is called before the first frame update

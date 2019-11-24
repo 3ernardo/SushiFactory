@@ -108,6 +108,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   foodPrefab: {fileID: 4872040605503759542, guid: a49af4d47a3534646b1d4a2f50f8dfdc,
     type: 3}
+  food: {fileID: 0}
   spawnPoint: {fileID: 2354193033217028382}
   spawnTimerInterval: 5
 --- !u!1 &2354193033217028383

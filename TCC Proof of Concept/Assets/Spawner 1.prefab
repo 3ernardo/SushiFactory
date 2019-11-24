@@ -93,7 +93,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 455576d00f4461749a730c9e65fad1b6, type: 2}
+  - {fileID: 2100000, guid: 96789393a8a4c476796c3a5006aa1269, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -139,8 +139,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1fef5ad654425cd41836ef2ae4f49c21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  foodPrefab: {fileID: 2263330848799108898, guid: 1be02a38f43e39d43911173ea4de3e13,
+  foodPrefab: {fileID: 1564019630758374098, guid: d99f94edfef544475a9a1b037b079456,
     type: 3}
+  food: {fileID: 3721481488140736662, guid: d99f94edfef544475a9a1b037b079456, type: 3}
   spawnPoint: {fileID: 2800513213516619054}
   spawnTimerInterval: 5
 --- !u!65 &2800513213549774133
