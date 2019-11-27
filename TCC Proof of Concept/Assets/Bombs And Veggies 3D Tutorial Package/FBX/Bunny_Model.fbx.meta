@@ -1,0 +1,144 @@
+fileFormatVersion: 2
+guid: ec4231afa8002694a998db7627bfac86
+timeCreated: 1451449533
+licenseType: Store
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: arm.L
+    100002: arm.R
+    100004: Blue_Bunny
+    100006: //RootNode
+    100008: BunnyRootBone
+    100010: BunnyRootBone_end
+    100012: Ear.L
+    100014: Ear.R
+    100016: Ear1.L
+    100018: Ear1.L_end
+    100020: Ear1.R
+    100022: Ear1.R_end
+    100024: EyeBone
+    100026: EyeBone_end
+    100028: foot.L
+    100030: foot.L_end
+    100032: foot.R
+    100034: foot.R_end
+    100036: forearm.L
+    100038: forearm.L_end
+    100040: forearm.R
+    100042: forearm.R_end
+    100044: Head
+    100046: leg.L
+    100048: leg.R
+    100050: Spine
+    100052: Spine1
+    100054: TailBone
+    100056: TailBone_end
+    100058: Z_Blue_Bunny_Skeleton
+    400000: arm.L
+    400002: arm.R
+    400004: Blue_Bunny
+    400006: //RootNode
+    400008: BunnyRootBone
+    400010: BunnyRootBone_end
+    400012: Ear.L
+    400014: Ear.R
+    400016: Ear1.L
+    400018: Ear1.L_end
+    400020: Ear1.R
+    400022: Ear1.R_end
+    400024: EyeBone
+    400026: EyeBone_end
+    400028: foot.L
+    400030: foot.L_end
+    400032: foot.R
+    400034: foot.R_end
+    400036: forearm.L
+    400038: forearm.L_end
+    400040: forearm.R
+    400042: forearm.R_end
+    400044: Head
+    400046: leg.L
+    400048: leg.R
+    400050: Spine
+    400052: Spine1
+    400054: TailBone
+    400056: TailBone_end
+    400058: Z_Blue_Bunny_Skeleton
+    4300000: Blue_Bunny
+    7400000: Z_Blue_Bunny_Skeleton|Bunny_Cry
+    7400002: Z_Blue_Bunny_Skeleton|Bunny_Fall
+    7400004: Z_Blue_Bunny_Skeleton|Bunny_Idle
+    7400006: Z_Blue_Bunny_Skeleton|Bunny_Idle_Claw
+    7400008: Z_Blue_Bunny_Skeleton|Bunny_Idle_Scratch
+    7400010: Z_Blue_Bunny_Skeleton|Bunny_JumpUp
+    7400012: Z_Blue_Bunny_Skeleton|Bunny_Land
+    7400014: Z_Blue_Bunny_Skeleton|Bunny_Running
+    7400016: Z_Blue_Bunny_Skeleton|Bunny_T-Pose
+    7400018: Z_Blue_Bunny_Skeleton|BunnyActivateClaw
+    9500000: //RootNode
+    13700000: Blue_Bunny
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

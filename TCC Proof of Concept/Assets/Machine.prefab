@@ -151,6 +151,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   counter: 0
-  prefabToSpawn: {fileID: 6089356015975773426, guid: 628215d4a8efa4657912f8811b93aa8d,
+  prefabToSpawn: {fileID: 5927914883946553607, guid: 20e16cda31c6ccf48b36f4503de10c9e,
     type: 3}
   spawnPoint: {fileID: 425612453976564595}

@@ -139,9 +139,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1fef5ad654425cd41836ef2ae4f49c21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  foodPrefab: {fileID: 1564019630758374098, guid: d99f94edfef544475a9a1b037b079456,
+  foodPrefab: {fileID: 6821488059295669651, guid: c499fd28a34b23647a8a759f22826298,
     type: 3}
-  food: {fileID: 3721481488140736662, guid: d99f94edfef544475a9a1b037b079456, type: 3}
+  food: {fileID: 3003695241447693066, guid: c499fd28a34b23647a8a759f22826298, type: 3}
   spawnPoint: {fileID: 2800513213516619054}
   spawnTimerInterval: 5
 --- !u!65 &2800513213549774133
