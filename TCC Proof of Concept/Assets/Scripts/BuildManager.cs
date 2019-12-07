@@ -29,8 +29,37 @@ public class BuildManager : MonoBehaviour
     public GameObject conveyorDownMachinePrefab;
     public GameObject conveyorLeftMachinePrefab;
 
+    private GameObject machineToBuild;
+    private Node selectedNode;
+    public SelectUI selectUI;
+
+    public GameObject GetMachineToBuild() {
+        return machineToBuild;
+    }
+
+    public void setMachineToBuild(GameObject machine) {
+        machineToBuild = machine;
+        deselectNode();
+    }
+
+    public void selectNode (Node node) {
+        if (selectedNode == node) {
+            deselectNode();
+            return;
+        }
+        selectedNode = node;
+        machineToBuild = null;
+        selectUI.setTarget(node);
+    }
+
+    public void deselectNode() {
+        selectedNode = null;
+        selectUI.hide();
+    }
+
     private void Start() {
         machineToBuild = standardMachinePrefab;
+        deselectNode();
         // PlayerMoney = 100f;
         PlayerWallet.instance.setMoney(PlayerMoney);
         PlayerScore.instance.setPoints(playerScore);
@@ -43,32 +72,25 @@ public class BuildManager : MonoBehaviour
     }
 
     public void ChangeMachineConveyorRight() {
-        machineToBuild = conveyorRightMachinePrefab;
+        setMachineToBuild(conveyorRightMachinePrefab);
     }
     public void ChangeMachineConveyorUp() {
-        machineToBuild = conveyorUpMachinePrefab;
+        setMachineToBuild(conveyorUpMachinePrefab);
     }
     public void ChangeMachineConveyorDown() {
-        machineToBuild = conveyorDownMachinePrefab;
+        setMachineToBuild(conveyorDownMachinePrefab);
     }
     public void ChangeMachineConveyorLeft() {
-        machineToBuild = conveyorLeftMachinePrefab;
+        setMachineToBuild(conveyorLeftMachinePrefab);
     }
-    
     public void ChangeMachineStandard() {
-        machineToBuild = standardMachinePrefab;
+        setMachineToBuild(standardMachinePrefab);
     }
     public void ChangeMachineAdvanced() {
-        machineToBuild = advancedMachinePrefab;
+        setMachineToBuild(advancedMachinePrefab);
     }
     public void ChangeMachineBasic() {
-        machineToBuild = basicMachinePrefab;
-    }
-
-    private GameObject machineToBuild;
-
-    public GameObject GetMachineToBuild() {
-        return machineToBuild;
+        setMachineToBuild(basicMachinePrefab);
     }
 
 }

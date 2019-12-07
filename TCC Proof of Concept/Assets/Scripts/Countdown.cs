@@ -13,7 +13,7 @@ public class Countdown : MonoBehaviour
     private void counter(){
         timeLeft -= Time.deltaTime;
         displayTimer.text = (timeLeft).ToString("0");
-        Debug.Log(timeLeft);
+        // Debug.Log(timeLeft);
     }
 
     // Start is called before the first frame update

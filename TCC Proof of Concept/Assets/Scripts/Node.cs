@@ -12,10 +12,12 @@ public class Node : MonoBehaviour
     private Color startColor;
 
     private Renderer rend;
+    BuildManager buildManager;
 
     void Start() {
         rend = GetComponent<Renderer>();
         startColor = rend.material.color;
+        buildManager = BuildManager.instance;
     }
 
     void OnMouseDown() {
@@ -23,16 +25,26 @@ public class Node : MonoBehaviour
             Debug.Log("Falha: Fundos insuficientes.");
             return;
         } else if (machine != null) {
-            Debug.Log("Falha: Já existe algo construído aqui.");
+            Debug.Log("Este tile já tem uma construção!");
+            buildManager.selectNode(this);
             return;
         }
 
-        GameObject machineToBuild = BuildManager.instance.GetMachineToBuild();
+        GameObject machineToBuild = buildManager.GetMachineToBuild();
         machine = (GameObject)Instantiate(machineToBuild, transform.position + positionOffset, transform.rotation);
 
-        BuildManager.instance.subtractMoney(10f);
+        buildManager.subtractMoney(10f);
         PlayerWallet.instance.removeMoney(10f);
     }
+
+    public void sellMachine() {
+        PlayerWallet.instance.addMoney(5f);
+        Destroy(machine);
+    }
+
+    public Vector3 getBuildPosition() {
+		return transform.position + positionOffset;
+	}
 
     void OnMouseEnter() {
         rend.material.color = hoverColor;
