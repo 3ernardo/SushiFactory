@@ -6,6 +6,7 @@ public class PlayerScore : MonoBehaviour
 {
     public static PlayerScore instance;
     private float playerPoints;
+    public float scoreGoal = 40f;
 
     void Awake() {
         instance = this;
