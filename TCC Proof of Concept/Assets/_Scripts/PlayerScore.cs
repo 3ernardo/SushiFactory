@@ -7,6 +7,7 @@ public class PlayerScore : MonoBehaviour
     public static PlayerScore instance;
     private float playerPoints;
     public float scoreGoal = 40f;
+    private bool playerHasWon;
 
     void Awake() {
         instance = this;
@@ -16,8 +17,20 @@ public class PlayerScore : MonoBehaviour
         return playerPoints;
     }
 
+    public bool getVictoryStatus(){
+        return playerHasWon;
+    }
+
     public void setPoints(float value) {
         playerPoints = value;
+    }
+
+    public void checkVictoryStatus() {
+        if (playerPoints >= scoreGoal) {
+            playerHasWon = true;
+        } else {
+            playerHasWon = false;
+        }
     }
 
     public void addPoints(float value) {

@@ -21,6 +21,10 @@ public class BuildManager : MonoBehaviour
         instance = this;
     }
 
+    public GameObject spawnerFish;
+    public GameObject spawnerNori;
+    public GameObject spawnerRice;
+
     public GameObject standardMachinePrefab;
     public GameObject advancedMachinePrefab;
     public GameObject basicMachinePrefab;
@@ -91,6 +95,15 @@ public class BuildManager : MonoBehaviour
     }
     public void ChangeMachineBasic() {
         setMachineToBuild(basicMachinePrefab);
+    }
+    public void ChangeSpawnerFish() {
+        setMachineToBuild(spawnerFish);
+    }
+    public void ChangeSpawnerNori() {
+        setMachineToBuild(spawnerNori);
+    }
+    public void ChangeSpawnerRice() {
+        setMachineToBuild(spawnerRice);
     }
 
 }

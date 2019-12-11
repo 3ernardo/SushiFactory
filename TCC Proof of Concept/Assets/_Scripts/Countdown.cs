@@ -6,6 +6,8 @@ using UnityEngine.UI;
 public class Countdown : MonoBehaviour
 {
 
+    public GameObject gameOverUI;
+    private bool isGameOver = false;
     public float timer = 120f;
     private float timeLeft;
     public Text displayTimer;
@@ -39,11 +41,14 @@ public class Countdown : MonoBehaviour
     }
 
     private void triggerGameOver() {
-        if (playerScore.getPoints() >= playerScore.scoreGoal) {
-            Debug.Log("Parabéns! Você venceu.");
-        } else {
-            Debug.Log("Infelizmente você não conseguiu.");
-        }
+        isGameOver = true;
+        playerScore.checkVictoryStatus();
+        gameOverUI.SetActive(true);
+        // if (playerScore.getPoints() >= playerScore.scoreGoal) {
+        //     Debug.Log("Parabéns! Você venceu.");
+        // } else {
+        //     Debug.Log("Infelizmente você não conseguiu.");
+        // }
     }
 
     // Start is called before the first frame update
@@ -56,6 +61,8 @@ public class Countdown : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        counter();
+        if (!isGameOver) {
+            counter();
+        }
     }
 }
