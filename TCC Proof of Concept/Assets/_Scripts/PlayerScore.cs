@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerScore : MonoBehaviour
 {
@@ -8,9 +9,15 @@ public class PlayerScore : MonoBehaviour
     private float playerPoints;
     public float scoreGoal = 40f;
     private bool playerHasWon;
+    public Text scoreGoalText;
 
     void Awake() {
         instance = this;
+    }
+
+    void Start(){
+        string sG = scoreGoal.ToString();
+        scoreGoalText.text = sG;
     }
 
     public float getPoints(){
