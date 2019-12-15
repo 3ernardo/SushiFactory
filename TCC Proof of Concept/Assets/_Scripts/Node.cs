@@ -33,8 +33,8 @@ public class Node : MonoBehaviour
         GameObject machineToBuild = buildManager.GetMachineToBuild();
         machine = (GameObject)Instantiate(machineToBuild, transform.position + positionOffset, transform.rotation);
 
-        buildManager.subtractMoney(10f);
-        PlayerWallet.instance.removeMoney(10f);
+        // buildManager.subtractMoney(10f);
+        PlayerWallet.instance.removeMoney(buildManager.GetMachineToBuildValue());
     }
 
     public void sellMachine() {

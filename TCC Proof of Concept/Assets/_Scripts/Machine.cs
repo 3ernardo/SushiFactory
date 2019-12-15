@@ -5,6 +5,9 @@ using UnityEngine;
 public class Machine : MonoBehaviour
 {
     public bool isAssembler;
+    public bool isSlicer;
+    public bool isCooker;
+
     private int counter = 0;
     public int amountNeeded;
     public Transform prefabToSpawn;
@@ -41,8 +44,14 @@ public class Machine : MonoBehaviour
         Destroy(go.gameObject);
         if (isAssembler) {
             AssemblerMechanics();
-        } else {
-            SlicerOrCookerMechanics();
+        } else if (isSlicer) {
+            if (foodType == "Fish") {
+                SlicerOrCookerMechanics();
+            }
+        } else if (isCooker) {
+            if (foodType == "Rice") {
+                SlicerOrCookerMechanics();
+            }
         }
     }
 
@@ -101,6 +110,8 @@ public class Machine : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (Countdown.instance.GetGameOver()){
+            prefabToSpawn = null;
+        }
     }
 }

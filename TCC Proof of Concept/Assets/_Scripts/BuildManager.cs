@@ -32,6 +32,10 @@ public class BuildManager : MonoBehaviour
     public GameObject conveyorUpMachinePrefab;
     public GameObject conveyorDownMachinePrefab;
     public GameObject conveyorLeftMachinePrefab;
+    
+    public GameObject machineCooker;
+    public GameObject machineAssembler;
+    public GameObject MAchineSlicer;
 
     private GameObject machineToBuild;
     private Node selectedNode;
@@ -44,6 +48,17 @@ public class BuildManager : MonoBehaviour
 
     public GameObject GetMachineToBuild() {
         return machineToBuild;
+    }
+
+    public float GetMachineToBuildValue() {
+        if (machineToBuild == conveyorRightMachinePrefab ||
+            machineToBuild == conveyorUpMachinePrefab ||
+            machineToBuild == conveyorDownMachinePrefab ||
+            machineToBuild == conveyorLeftMachinePrefab) {
+            return 10f;
+        } else {
+            return 100f;
+        }
     }
 
     public void setMachineToBuild(GameObject machine) {
@@ -125,8 +140,8 @@ public class BuildManager : MonoBehaviour
 
     void Update() {
         // PlayerMoneyCounter.text = Mathf.Floor(PlayerMoney).ToString();
-        PlayerMoneyCounter.text = Mathf.Floor(PlayerWallet.instance.getMoney()).ToString();
-        PlayerScoreCounter.text = Mathf.Floor(PlayerScore.instance.getPoints()).ToString();
+        PlayerMoneyCounter.text = "$" + " " + (Mathf.Floor(PlayerWallet.instance.getMoney()).ToString());
+        PlayerScoreCounter.text = "P" + " " + (Mathf.Floor(PlayerScore.instance.getPoints()).ToString());
     }
 
     public void ChangeMachineConveyorRight() {
@@ -167,6 +182,18 @@ public class BuildManager : MonoBehaviour
     }
     public void ChangeSpawnerRice() {
         setMachineToBuild(spawnerRice);
+        hideDropDowns();
+    }
+    public void ChangeMachineCooker() {
+        setMachineToBuild(machineCooker);
+        hideDropDowns();
+    }
+    public void ChangeMachineSlicer() {
+        setMachineToBuild(MAchineSlicer);
+        hideDropDowns();
+    }
+    public void ChangeMachineAssembler() {
+        setMachineToBuild(machineAssembler);
         hideDropDowns();
     }
 

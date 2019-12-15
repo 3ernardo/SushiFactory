@@ -9,4 +9,7 @@ public class MainMenu : MonoBehaviour
         SceneManager.LoadScene("main");
         // SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1 );
     }
+    public void GoTitle() {
+        SceneManager.LoadScene("gui");
+    }
 }
