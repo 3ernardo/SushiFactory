@@ -20,9 +20,12 @@ public class PlayerWallet : MonoBehaviour
     }
 
     public bool checkForCredit(float value) {
+        Debug.Log("Testando fundos: Saldo - " + playerMoney + ", Teste - " + value);
         if (playerMoney >= value) {
+            Debug.Log("Testando fundos: Sucesso");
             return true;
         } else {
+            Debug.Log("Testando fundos: Falha");
             return false;
         }
     }
